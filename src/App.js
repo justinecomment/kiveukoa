@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import Auth from './containers/Auth/Auth';
+import Content   from './hoc/Content/Content'
+import Dashboard from './containers/Dashboard/Dashboard';
+import Auth      from './containers/Auth/Auth';
+import Navigation from './components/Navigation/Navigation';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <p>bonjour</p>
+      <Content>
+        <Navigation />
         <Switch>
-          <Route path="/Auth" component={Auth} />
-          <a href="/Auth" >Auth</a>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/auth" component={Auth} />
         </Switch>
-      </div>
+      </Content>
     );
   }
 }

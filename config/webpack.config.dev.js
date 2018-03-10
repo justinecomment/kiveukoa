@@ -136,7 +136,7 @@ module.exports = {
             loader: require.resolve('url-loader'),
             options: {
               limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
+              name: 'static/media/[name].[hash:8].[ext]'
             },
           },
           // Process JS with Babel.
@@ -165,6 +165,8 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
+                  modules: true,
+	 	              localIdentName:'[name]__[local]__[hash:base64:5]'
                 },
               },
               {

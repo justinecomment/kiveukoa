@@ -34,7 +34,7 @@ class Auth extends Component {
     }
 
     render(){
-        const formElements = [];
+        let formElements = [];
         for (let key in this.state.controls){
             formElements.push({
                 id : key,
@@ -42,13 +42,13 @@ class Auth extends Component {
             });
         }
 
-        const form = formElements.map(formElement => {
+        const form = formElements.map(formElement => (
             <Input
                 key={formElement.id}
                 elementType={formElement.config.elementType} 
                 value={formElement.config.value}
                 changed={(event) => this.changeHandler(event, formElement.id)} />
-        });
+        ));
 
 
         return(
