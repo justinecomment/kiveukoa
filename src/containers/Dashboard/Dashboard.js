@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom';
 
 import Content from '../../hoc/Content/Content';
 import classes from './Dashboard.css';
@@ -30,7 +29,7 @@ class Dashboard extends Component {
     };
 
    
-    poster = () => {
+    addDataToPost = () => {
         let dataToPost = {
             chinois:{
                 label : "Chinois",
@@ -57,7 +56,15 @@ class Dashboard extends Component {
             })
         }
     }
+
+    onClickToConsulter = () =>{
+        this.props.history.push('/consulter');
+    }
         
+    onClickToAjouter = () => {
+        this.props.history.push('/ajouter');
+    }
+
     render(){
     
     return(
@@ -71,19 +78,11 @@ class Dashboard extends Component {
                             <li key={id}>{menu.config.label}</li>
                         ))}
                     </ul>
-
                 </div>
 
-                <NavLink to="/consulter">
-                    <Button type="Normal">Consulter l'ensemble des déj</Button>
-                </NavLink> 
-
-                <NavLink to="/ajouter">
-                    <Button type="Normal">Créer un déj</Button>
-                </NavLink> 
-
-                <button onClick={this.poster}>poster</button>
-
+                <Button type="Normal" clicked={this.onClickToConsulter}>Consulter l'ensemble des déj</Button>
+                <Button type="Normal" clicked={this.onClickToAjouter}>Créer un déj</Button>
+                {/* <button onClick={this.addDataToPost}>ajouter menuType</button> */}
             </div>
         </Content>
         );
