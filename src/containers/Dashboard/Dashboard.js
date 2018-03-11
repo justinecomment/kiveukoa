@@ -72,7 +72,6 @@ class Dashboard extends Component {
             <div className={classes.Dashboard}>
                 <div>
                     <p>Menu classés par type</p>
-
                     <ul className={classes.listeMenus}>
                          {this.state.menuType.map((menu, id) => (
                             <li key={id}>{menu.config.label}</li>

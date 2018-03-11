@@ -12,9 +12,11 @@ class Consulter extends Component {
             <Content>
                 <div className={classes.Consulter}>
                     <NavLink to="/">
-                        <Button type="Normal">Revenir en arrière</Button>
+                        <Button type="Normal">
+                            <i className="fas fa-long-arrow-alt-left"></i>
+                        </Button>
                     </NavLink>
-                    <p>consulter</p>
+                    <p>Vous pouvez consulter l'ensemble des déjeuner</p>
                 </div>
             </Content>
         );

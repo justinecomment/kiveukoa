@@ -12,9 +12,11 @@ class Ajouter extends Component {
             <Content>
                 <div className={classes.Ajouter}>
                     <NavLink to="/">
-                        <Button type="Normal">Revenir en arrière</Button>
+                        <Button type="Normal">
+                        <i className="fas fa-long-arrow-alt-left"></i>
+                        </Button>
                     </NavLink>
-                    <p>Ajouter</p>
+                    <p>Vous pouvez créer un déjeuner</p>
                 </div>
             </Content>
         );
