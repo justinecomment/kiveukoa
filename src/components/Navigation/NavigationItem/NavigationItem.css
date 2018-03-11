@@ -1,0 +1,12 @@
+.NavLink{
+    color: #cc3a00;
+    font-weight: bold;
+    margin: 0px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.NavLink:hover{
+    text-decoration: none;
+    color: #a73001;
+}

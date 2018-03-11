@@ -2,6 +2,7 @@ import React from 'react';
 
 import classes from './Button.css';
 
+
 const Button = (props) => (
     <div>
         <button className={[classes.button, classes[props.type]].join(' ')}

@@ -9,6 +9,7 @@
     padding: 7px 40px;
     margin: 10px;
     font-weight: bold;
+    border-radius: 5px;
 }
 .button:hover{
     background-color: #cecece;
@@ -17,11 +18,24 @@
 
 
 .Success {
-    color: #5C9210;
+    background-color: #5C9210;
+    color: #fff;
 }
 
 .Danger {
-    color: #944317;
+    background-color: #944317;
+    color: #fff;
+
+}
+
+.Normal{
+    background-color: #f59292;
+    color: #8a4d4d;
+}
+
+.Normal:hover{
+    background-color: #de8282;
+    color: #8a4d4d;
 }
 
 button:disabled {

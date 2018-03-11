@@ -1,5 +1,5 @@
 .Navigation{
-    background-color: #73a6bd;
+    background-color: #ff7c24;
     margin: 0;
     align-items: center;
     justify-content: center;
@@ -7,24 +7,25 @@
 }
 
 .Navigation li{
-    color: blue;
     list-style-type: none;
     display: inline-flex;
     justify-content: center;
-    padding: 20px 0px;
+    padding: 15px 0px;
     align-items: center;
     justify-content: center;
 }
 
 .Navigation li:hover{
-    background-color: #6995a9;
-    padding: 20px 0px;
+    background-color: #f76f14;
+    padding: 15px 0px;
 }
 
-.Navigation .menu{
-    color: #32515f;
-    margin: 0px 40px;
-    text-decoration: none;
-    text-transform: uppercase;
+.Icon{
+    color: #cf3a00;
+    font-size: 40px;
+}
+
+.Icon:hover{
+    color: rgb(167, 48, 1);
 }
 

@@ -1,22 +1,20 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import Content from '../../hoc/Content/Content';
 import classes from './Navigation.css';
+import NavigationItem from './NavigationItem/NavigationItem';
 
 
 const Navigation = () => (
     <Content>
-        <nav>
-            <ul className={classes.Navigation}>
-                <li>
-                    <NavLink className={classes.menu} to="/">home</NavLink>
-                </li>
-                <li>
-                    <NavLink className={classes.menu} to="/Auth">Auth</NavLink>
-                </li>
-            </ul>
-        </nav>
+        <ul className={classes.Navigation}>
+            <NavigationItem link='/'>Dashboard</NavigationItem>
+            <NavigationItem link='/admin'>Admin</NavigationItem>
+            <NavigationItem link='/login' className={classes.Icon}>
+                <i className="fas fa-user-circle"></i>
+            </NavigationItem>
+            
+        </ul>
     </Content>
 );
 

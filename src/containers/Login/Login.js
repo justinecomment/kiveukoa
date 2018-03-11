@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
 import Input from '../../components/Input/Input';
-import classes from './Auth.css';
+import classes from './Login.css';
 import Button from '../../components/Button/Button';
 
-class Auth extends Component {
+class Login extends Component {
     state={
         login:{
             email:{
@@ -112,4 +112,4 @@ class Auth extends Component {
     }
 }
 
-export default Auth;
+export default Login;
