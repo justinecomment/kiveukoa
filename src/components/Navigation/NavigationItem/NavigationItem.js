@@ -14,11 +14,23 @@ const NavigationItem = (props) => {
                                    {props.children}
                          </NavLink>
             break;
-        case ('dropDown'):
-            navElement = <DropDown link1="/"
-                                    link2="/"
-                                    textLink1="Consulter les déj"
-                                    textLink2="Créer un déj">
+        case ('dropDown1'):
+            navElement = <DropDown link1="/dashboard"
+                                   link2="/consulter"
+                                   link3="/ajouter"
+                                   textLink1="Dashboard"
+                                   textLink2="Consulter les déj"
+                                   textLink3="Créer un déj">
+                                    {props.children}
+                        </DropDown>
+            break;
+        case ('dropDown2'):
+            navElement = <DropDown link1="/create-restaurant"
+                                   link2="/create-type-menu"
+                                   link3="/create-menu"
+                                   textLink1="Créer un restaurant"
+                                   textLink2="Créer un Type de Menu"
+                                   textLink3="Créer un Menu">
                                     {props.children}
                         </DropDown>
             break;
@@ -32,7 +44,6 @@ const NavigationItem = (props) => {
     return(
         <li>
             {navElement}
-            {/* <NavLink className={classes.NavLink} to={props.link}>{props.children}</NavLink>  */}
         </li>  
     );
 };

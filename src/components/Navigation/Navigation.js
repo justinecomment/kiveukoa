@@ -8,8 +8,8 @@ import NavigationItem from './NavigationItem/NavigationItem';
 const Navigation = () => (
     <Content>
         <ul className={classes.Navigation}>
-            <NavigationItem type="dropDown" >Dashboard</NavigationItem>
-            <NavigationItem type="button" link='/admin'>Admin</NavigationItem>
+            <NavigationItem type="dropDown1">DASHBOARD</NavigationItem>
+            <NavigationItem type="dropDown2">ADMIN</NavigationItem>
             <NavigationItem type="button" link='/login' className={classes.Icon}>
                 <i className="fas fa-user-circle"></i>
             </NavigationItem>

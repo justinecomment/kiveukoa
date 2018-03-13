@@ -12,6 +12,7 @@ const DropDown = (props) => (
         <div className={classes.DropdownContent}>
             <a href={props.link1}>{props.textLink1}</a>
             <a href={props.link2}>{props.textLink2}</a>
+            <a href={props.link3}>{props.textLink3}</a>
         </div>
     </div>
 );

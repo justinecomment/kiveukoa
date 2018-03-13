@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import Content from '../../hoc/Content/Content';
 import classes from './Dashboard.css';
-import Button from '../../components/Button/Button';
 import axios from '../../axios-menu';
 
 
@@ -48,7 +47,6 @@ class Dashboard extends Component {
         for(let oneData in dataToPost){
             axios.post('/menu.json', dataToPost[oneData])
             .then((res) => {
-              console.log(res.data);
               this.setState({menuType : res.data});
             })
             .catch((err) => {
@@ -57,16 +55,7 @@ class Dashboard extends Component {
         }
     }
 
-    onClickToConsulter = () =>{
-        this.props.history.push('/consulter');
-    }
-        
-    onClickToAjouter = () => {
-        this.props.history.push('/ajouter');
-    }
-
     render(){
-    
     return(
         <Content>
             <div className={classes.Dashboard}>
@@ -79,8 +68,6 @@ class Dashboard extends Component {
                     </ul>
                 </div>
 
-                <Button type="Normal" clicked={this.onClickToConsulter}>Consulter l'ensemble des déj</Button>
-                <Button type="Normal" clicked={this.onClickToAjouter}>Créer un déj</Button>
                 {/* <button onClick={this.addDataToPost}>ajouter menuType</button> */}
             </div>
         </Content>
